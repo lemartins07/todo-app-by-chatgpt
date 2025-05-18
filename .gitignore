@@ -1,0 +1,33 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.code-workspace
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.swp
+*.bak
+*.swo
+*.orig
+
+# Ambientes e builds locais
+dist/
+build/
+out/
+node_modules/
+
+# Cache do navegador e ferramentas
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testes (se usar Jest ou similares no futuro)
+coverage/
