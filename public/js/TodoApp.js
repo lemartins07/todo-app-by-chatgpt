@@ -93,7 +93,7 @@
     getTodosFromCache: function () {
       const todosFromCache = localStorage.getItem('todos');
       const parsedsTodos = JSON.parse(todosFromCache);
-      parsedsTodos.forEach((todo) => this.setTasksInState(todo));
+      parsedsTodos && parsedsTodos.forEach((todo) => this.setTasksInState(todo));
     },
 
     setTasksInState: function (todo) {
@@ -210,8 +210,9 @@
     showToasty: function (message, type) {
       if (this.isToatyVisible()) {
         this.hideToasty();
-        this.DOM.toasty.classList.remove('toasty--error', 'toasty--success');
       }
+
+      this.DOM.toasty.classList.remove('toasty--error', 'toasty--success');
 
       this.DOM.toasty.classList.add('toasty--show', `toasty--${type}`);
       this.DOM.toastyText.textContent = message;
